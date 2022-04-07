@@ -72,6 +72,7 @@ data_initilization:
 	st r1,r2
 	st r0, r1
 
+	#wait for press to start
 	ldi r1, controllerIO
 	wait_for_press:
 		ld r1,r0
@@ -82,10 +83,10 @@ data_initilization:
 	ldi r0, displayIO
 
 	mainloop:
-		ldi r1, controllerIO
+		ldi r1, controllerIO #read move_addr
 		ld r1,r1
 		push r1
-		rts	
+		rts	#goto move
 	br mainloop
 	
 move_left:
@@ -103,7 +104,8 @@ move_up:
 move_down:
 	jsr load_XY_packets
 	dec r1
-	br update_head
+	#br update_head OPTIMIZATION
+
 update_head: #Uses vals from r1(Y) and r2(X) to update r0(IO-0)
 	#update head position on screen
 	st r0, r1 #write Head Y
@@ -155,7 +157,9 @@ generate_new_apple:
 SNAKE_DEATH:
 	ldi r0, freeDrawIO
 	ldi r3, 32
-	draw_loop:
+	#write 16x16 display with text "LOSE"
+	# 32 means 16 = 8+8 => 16*2 = 32 tackts
+	draw_loop: #write predefined text
 		st r0, r1
 		dec r3
 	bnz draw_loop
@@ -170,6 +174,7 @@ APPLE_EATED:
 	ld r0, r1
 	inc r1
 	st r0, r1
+	#update score_display
 	ldi r0, score_pointer
 	st r0, r1
 	pop r1
