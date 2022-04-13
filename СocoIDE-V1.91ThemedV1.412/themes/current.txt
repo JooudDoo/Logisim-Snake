@@ -9,4 +9,4 @@
 Подсветка синтаксиса команд - #32A5F2
 Подсветка синтаксиса меток - #0BA242
 Подсветка синтаксиса операторов - #B232F2
-Последний открытый файл - \E:/Programming/logisimCDM8/Project/LastVer/Logisim-Snake/softwareVER/test5(Lose screen).asm
+Последний открытый файл - \E:/Programming/logisimCDM8/Project/LastVer/Logisim-Snake — копия/softwareVER/test5(Lose screen).asm
