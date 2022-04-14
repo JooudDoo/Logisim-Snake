@@ -11,9 +11,8 @@ controllerIO:
 score_pointer:
 	asect 0xfd
 freeDrawIO:
-	asect 0xfe
-	asect 0xd0
-tail_arr: ds 32
+	asect 0xb0
+tail_arr: ds 64
 
 #Interuptions
 	asect 0xf4 
@@ -35,7 +34,7 @@ XPacket: ds 1 #First 4-bits for X-cord (Other MultiPurpose)
 	asect 0x00
 init:
 #Crutch for enabling interrupts
-	setsp 0xcf
+	setsp 0xaf
 	ldi r0, data_initilization
 	push r0
 	ldi r0, 0b10000000
@@ -104,7 +103,7 @@ move_up:
 move_down:
 	jsr load_XY_packets
 	dec r1
-	#br update_head OPTIMIZATION
+	#br update_head [OPTIMIZATION]
 
 update_head: #Uses vals from r1(Y) and r2(X) to update r0(IO-0)
 	#update head position on screen
@@ -158,7 +157,7 @@ SNAKE_DEATH:
 	ldi r0, freeDrawIO
 	ldi r3, 32
 	#write 16x16 display with text "LOSE"
-	# 32 means 16 = 8+8 => 16*2 = 32 tackts
+	# 32 means 16 = 8+8 => 16*2 = 32
 	draw_loop: #write predefined text
 		st r0, r1
 		dec r3
@@ -180,5 +179,4 @@ APPLE_EATED:
 	pop r1
 	pop r0
 	rti
-
 end
