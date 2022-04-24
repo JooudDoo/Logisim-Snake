@@ -155,9 +155,9 @@ generate_new_apple:
 	
 SNAKE_DEATH:
 	ldi r0, freeDrawIO
-	ldi r3, 32
-	#write 16x16 display with text "LOSE"
-	# 32 means 16 = 8+8 => 16*2 = 32
+	ldi r1, 16 #Send image code (0 - "Lose")
+	ldi r3, 16
+	#push 16 signals to redraw display
 	draw_loop: #write predefined text
 		st r0, r1
 		dec r3
