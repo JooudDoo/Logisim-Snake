@@ -154,11 +154,11 @@ generate_new_apple:
 	rts
 	
 PLAYER_WIN:
-	ldi r1, 17 #Send image code (1 - "Lose") (17 - "Win")
+	ldi r1, 16 #Send image code (0 - "Lose") (16 - "Win")
 	br freeDrawer
 
 SNAKE_DEATH:
-	ldi r1, 1 #Send image code (1 - "Lose") (17 - "Win")
+	ldi r1, 0 #Send image code (0 - "Lose") (16 - "Win")
 #	br freeDrawer [OPTIMIZATION]
 
 #Draws on the display selected preloaded image and shutdown processor
