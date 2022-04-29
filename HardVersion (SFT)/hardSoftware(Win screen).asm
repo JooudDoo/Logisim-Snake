@@ -15,15 +15,14 @@ freeDrawIO:
 tail_arr: ds 64
 
 #Interuptions
-	asect 0xf4 
-	dc SNAKE_DEATH
-	dc 1
+	asect 0xf6
 	dc APPLE_EATED
 	dc 1
 
 	
 #main data
 	asect 0xf0
+apple_coords: ds 1
 tail_pos: ds 1
 game_score: ds 1
 YPacket: ds 1 #First 4-bits for Y-cord (Other MultiPurpose)
@@ -88,6 +87,7 @@ data_initilization:
 		rts	#goto move
 	br mainloop
 	
+	
 move_left:
 	jsr load_XY_packets
 	dec r2
@@ -105,63 +105,82 @@ move_down:
 	dec r1
 	#br update_head [OPTIMIZATION]
 
+
 update_head: #Uses vals from r1(Y) and r2(X) to update r0(IO-0)
 	ldi r0, displayIO
 	#update head position on screen
 	st r0, r1 #write Head Y on screen
 	st r0, r2 #write Head X on screen
+	
+	#check if snake goes into border -> DIE
+	ldi r3, 0b11110000 #load mask
+	and r1, r3 #Check Y Coord
+	bnz PLAYER_LOSE
+	ldi r3, 0b11110000 #load mask
+	and r2, r3 #Check X Coord
+	bnz PLAYER_LOSE
+	
 	#Update in memory position of head
 	ldi r3, YPacket 
 	st r3, r1
 	inc r3
 	st r3, r2
 	
+	#check if we ate apple
+	ld r0, r1
+	ldi r3, apple_coords
+	ld r3,r3
+	cmp r1,r3
+	bz APPLE_EATED
+	APPLE_UPDATED:
+	
 	#delete tail
 	ldi r1, tail_pos #read ptr on ptr on pixel to delete
 	ld r1, r1	     #read ptr on pixel coords
 	ld r1, r3	     #read pixel coord to delete
 	st r0, r3 		 #write delete tail YX on screen
+	
+#check is snake head have collisions with tail (In the tail)
+#r2 - current head | r1 - array | r3 - game score
+	ldi r3, game_score
+	ld r3,r3
+	inc r3
+	ldi r1, tail_arr #Load start of array
+	ld r0, r2 #read current head (Refactored) (Like YX)
+
+check_tail_bump_loop: #Check loop
+	ld r1,r0 #Load element from array
+	cmp r2,r0 #Compare it with head
+	bz PLAYER_LOSE
+	inc r1 #Go to next elem
+	dec r3 #Descrease counter (Like game score | Snake elements on screen)
+	bnz check_tail_bump_loop
+	
+	ldi r0, displayIO
  	#add new tail in arr
+	ldi r1, tail_pos #read ptr on ptr on pixel to delete
+	ld r1, r1	     #read ptr on pixel coords
 	ld r0, r3 #read current head (Refactored) (Like YX)
-	push r1 #safe last head position to delete
 	st r1, r3 #store head to last delete position
 	dec r1    #move to next delete position
 	#check status of array (if need to loop to end - do)
 	ldi r2, tail_arr
 	cmp r1,r2
 	ldi r3, game_score
-	ld r3, r3
-	bge updated #if tail_arr not in right position  (r1 < tail_arr) (make it right)
-	add r3, r2
-	move r2, r1
+	ld r3,r3
 	
-updated:      #else (tail in right position) (r1>=tail_arr) store
+	bge updated #if tail in right pos - br(tail in right position) (r1>=tail_arr) than store
+	add r3, r2 #else tail_arr not in right position - fix (r1 < tail_arr) (make it right)
+	move r2, r1
+updated:      
 	ld r0, r2 #read current head position
 	ldi r0, tail_pos
-	st r0, r1
-	inc r3
-#check is snake head in bad position (In the tail)
-#r2 - current head | r1 - array | r3 - game score
-	ldi r1, tail_arr
-check_tail_bump_loop:
-	ld r1,r0
-	cmp r2,r0
-	bz is_current_head
-	check_tail_bump:
-	inc r1
-	dec r3
-	bnz check_tail_bump_loop
-	pop r1
-	ldi r0, displayIO
-	br mainloop
+	st r0, r1 #Store last element to delete addr
+	inc r3 #Increase cursor in array
+	ldi r0, displayIO #Reload to r0 right addr
+	br mainloop #Go to next frame
 	
-is_current_head:
-	pop r0
-	cmp r1,r0
-	bnz SNAKE_DEATH
-	push r0
-	br check_tail_bump
-
+	
 load_XY_packets:
 	ldi r3, XPacket
 	ld r3,r2
@@ -169,20 +188,25 @@ load_XY_packets:
 	ld r3,r1
 	rts
 	
+	
 generate_new_apple:
 	ldi r0, randomGenerator
 	ld r0, r1
 	inc r0
 	st r0, r1
+	ldi r0, apple_coords
+	st r0,r1
 	rts
+
 
 PLAYER_WIN:
 	ldi r1, 16 #Send image code (0 - "Lose") (16 - "Win")
 	br freeDrawer	
 
-SNAKE_DEATH:
+PLAYER_LOSE:
 	ldi r1, 0 #Send image code (0 - "Lose") (16 - "Win")
 #	br freeDrawer [OPTIMIZATION]
+	
 	
 #Draws on the display selected preloaded image and shutdown processor
 freeDrawer: #In r1 must lie number of picture
@@ -196,11 +220,12 @@ freeDrawer: #In r1 must lie number of picture
 	bnz draw_loop
 	halt
 	
+	
 APPLE_EATED:
 	push r0
 	push r1
 	push r2
-	ldi r2, 1 #Current max score
+	ldi r2, 64 #Current max score
 	jsr generate_new_apple #Redraw apple on screen
 	#update score
 	ldi r0, game_score #Load game score from memory
@@ -215,5 +240,5 @@ APPLE_EATED:
 	pop r2
 	pop r1
 	pop r0
-	rti
+	br APPLE_UPDATED
 end
