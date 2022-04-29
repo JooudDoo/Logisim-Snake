@@ -43,10 +43,6 @@ init:
 	
 data_initilization:
 #init controller
-	ldi r0, game_score
-	ldi r1, 2
-	st r0, r1
-	
 	ldi r0, controllerIO 
 	ldi r1, move_left
 	st r0, r1
@@ -179,12 +175,21 @@ generate_new_apple:
 	inc r0
 	st r0, r1
 	rts
-	
+
+PLAYER_WIN:
+	ldi r1, 16 #Send image code (0 - "Lose") (16 - "Win")
+	br freeDrawer	
+
 SNAKE_DEATH:
+	ldi r1, 0 #Send image code (0 - "Lose") (16 - "Win")
+#	br freeDrawer [OPTIMIZATION]
+	
+#Draws on the display selected preloaded image and shutdown processor
+freeDrawer: #In r1 must lie number of picture
 	ldi r0, freeDrawIO
-	ldi r3, 32
-	#write 16x16 display with text "LOSE"
-	# 32 means 16 = 8+8 => 16*2 = 32
+	st r0, r1
+	ldi r3, 16
+	#push 16 signals to redraw display
 	draw_loop: #write predefined text
 		st r0, r1
 		dec r3
@@ -194,15 +199,20 @@ SNAKE_DEATH:
 APPLE_EATED:
 	push r0
 	push r1
-	jsr generate_new_apple
+	push r2
+	ldi r2, 1 #Current max score
+	jsr generate_new_apple #Redraw apple on screen
 	#update score
-	ldi r0, game_score
+	ldi r0, game_score #Load game score from memory
 	ld r0, r1
-	inc r1
+	inc r1 #Increase score
+	cmp r1, r2 #Check if player have enough score to win
+	bz PLAYER_WIN
 	st r0, r1
 	#update score_display
-	ldi r0, score_pointer
+	ldi r0, score_pointer #Redraw score on screen
 	st r0, r1
+	pop r2
 	pop r1
 	pop r0
 	rti

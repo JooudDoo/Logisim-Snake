@@ -153,9 +153,18 @@ generate_new_apple:
 	st r0, r1
 	rts
 	
+PLAYER_WIN:
+	ldi r1, 17 #Send image code (1 - "Lose") (17 - "Win")
+	br freeDrawer
+
 SNAKE_DEATH:
+	ldi r1, 1 #Send image code (1 - "Lose") (17 - "Win")
+#	br freeDrawer [OPTIMIZATION]
+
+#Draws on the display selected preloaded image and shutdown processor
+freeDrawer: #In r1 must lie number of picture
 	ldi r0, freeDrawIO
-	ldi r1, 16 #Send image code (0 - "Lose")
+	st r0, r1
 	ldi r3, 16
 	#push 16 signals to redraw display
 	draw_loop: #write predefined text
@@ -167,15 +176,20 @@ SNAKE_DEATH:
 APPLE_EATED:
 	push r0
 	push r1
-	jsr generate_new_apple
+	push r2
+	ldi r2, 64 #Current max score
+	jsr generate_new_apple #Redraw apple on screen
 	#update score
-	ldi r0, game_score
+	ldi r0, game_score #Load game score from memory
 	ld r0, r1
-	inc r1
+	inc r1 #Increase score
+	cmp r1, r2 #Check if player have enough score to win
+	bz PLAYER_WIN
 	st r0, r1
 	#update score_display
-	ldi r0, score_pointer
+	ldi r0, score_pointer #Redraw score on screen
 	st r0, r1
+	pop r2
 	pop r1
 	pop r0
 	rti
