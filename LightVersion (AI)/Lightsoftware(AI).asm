@@ -29,6 +29,7 @@ bot_tail_arr: ds 48
 	
 #main data
 	asect 0xc0
+
 YBot: ds 1
 XBot: ds 1
 apple_coords: ds 1
@@ -36,6 +37,7 @@ tail_pos: ds 1
 bot_tail_pos: ds 1
 player_score: ds 1
 bot_score: ds 1
+loop_testing_check: ds 1
 YPacket: ds 1 #First 4-bits for Y-cord (Other MultiPurpose)
 XPacket: ds 1 #First 4-bits for X-cord (Other MultiPurpose)
 #r1 #UP/DOWN
@@ -48,10 +50,10 @@ enable_bot_memory:
 	ldi r0, switch_cell
 	st r0, r1
 	
-	asect 0xE0
+	asect 0xEB
 #return from bot_memory
 	br mainloop
-	
+
 	asect 0x06
 init:
 #Crutch for enabling interrupts
