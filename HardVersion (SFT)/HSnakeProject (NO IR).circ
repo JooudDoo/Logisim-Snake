@@ -126,7 +126,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(250,410)" to="(250,430)"/>
     <wire from="(310,320)" to="(310,420)"/>
     <wire from="(260,480)" to="(480,480)"/>
-    <wire from="(1450,190)" to="(1460,190)"/>
     <wire from="(380,240)" to="(410,240)"/>
     <wire from="(380,160)" to="(410,160)"/>
     <wire from="(380,120)" to="(410,120)"/>
@@ -187,21 +186,92 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(230,430)" to="(250,430)"/>
     <wire from="(470,420)" to="(480,420)"/>
     <wire from="(470,340)" to="(480,340)"/>
+    <wire from="(280,90)" to="(290,90)"/>
     <wire from="(370,200)" to="(380,200)"/>
     <wire from="(330,600)" to="(340,600)"/>
     <wire from="(130,520)" to="(140,520)"/>
     <wire from="(230,480)" to="(240,480)"/>
     <wire from="(910,480)" to="(920,480)"/>
+    <comp lib="0" loc="(180,390)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(110,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="vec"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(370,200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="keyboardButton"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(130,250)" name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp loc="(250,180)" name="randomGenChip">
+      <a name="labelfont" val="Segoe UI Light plain 12"/>
+    </comp>
+    <comp lib="0" loc="(270,490)" name="Tunnel">
+      <a name="label" val="R/W"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(910,480)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="IOdat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(140,350)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1280,640)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="7"/>
+      <a name="label" val="keyboardButton"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(130,210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IRQ"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(280,90)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="IOdat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(330,320)" name="Splitter">
+      <a name="fanout" val="9"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit6" val="8"/>
+    </comp>
+    <comp lib="3" loc="(450,130)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(220,390)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(130,210)" name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </comp>
     <comp lib="0" loc="(270,400)" name="Tunnel">
       <a name="label" val="data"/>
       <a name="labelfont" val="Sitka Heading plain 9"/>
     </comp>
-    <comp lib="0" loc="(410,140)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x61"/>
+    <comp lib="1" loc="(260,480)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
     </comp>
-    <comp loc="(1430,210)" name="scoreChip"/>
-    <comp lib="0" loc="(410,340)" name="Tunnel">
+    <comp lib="5" loc="(990,270)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(250,110)" name="Tunnel">
+      <a name="facing" val="north"/>
       <a name="label" val="IOsel"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
@@ -211,127 +281,111 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="IOaddr"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(280,230)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-      <a name="label" val="IOdat"/>
+    <comp lib="0" loc="(110,480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IAck"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(350,370)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="data"/>
-      <a name="labelfont" val="Sitka Heading plain 9"/>
-    </comp>
-    <comp lib="0" loc="(130,230)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="code"/>
-      <a name="labelfont" val="Sitka Heading plain 9"/>
-    </comp>
-    <comp loc="(250,180)" name="randomGenChip">
-      <a name="labelfont" val="Segoe UI Light plain 12"/>
-    </comp>
-    <comp lib="0" loc="(110,440)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IRQ"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(410,220)" name="Constant">
+    <comp lib="3" loc="(450,210)" name="Comparator">
       <a name="width" val="7"/>
-      <a name="value" val="0x77"/>
     </comp>
-    <comp lib="0" loc="(180,390)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(910,480)" name="Tunnel">
-      <a name="facing" val="south"/>
+    <comp lib="1" loc="(240,490)" name="Controlled Buffer">
+      <a name="facing" val="west"/>
       <a name="width" val="8"/>
-      <a name="label" val="IOdat"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+      <a name="control" val="left"/>
     </comp>
-    <comp lib="0" loc="(480,190)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="Direction"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="0" loc="(1950,120)" name="Power"/>
+    <comp loc="(260,110)" name="scoreChip"/>
+    <comp lib="1" loc="(370,590)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+      <a name="negate0" val="true"/>
     </comp>
     <comp lib="0" loc="(920,570)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="IOsel"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(400,570)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tck"/>
-      <a name="labelfont" val="Serif plain 6"/>
+    <comp lib="0" loc="(130,230)" name="Pull Resistor">
+      <a name="facing" val="west"/>
     </comp>
-    <comp lib="1" loc="(260,480)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="3" loc="(450,170)" name="Comparator">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(880,480)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="label" val="IOaddr"/>
+    <comp lib="0" loc="(250,440)" name="Tunnel">
+      <a name="label" val="R/W"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(250,250)" name="Tunnel">
+    <comp lib="0" loc="(410,140)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x61"/>
+    </comp>
+    <comp lib="0" loc="(250,180)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="IOsel"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="5" loc="(1350,200)" name="Hex Digit Display"/>
-    <comp lib="0" loc="(130,210)" name="Pull Resistor">
+    <comp lib="0" loc="(480,190)" name="Splitter">
       <a name="facing" val="west"/>
+      <a name="fanout" val="13"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="legacy"/>
+      <a name="bit1" val="4"/>
+      <a name="bit2" val="8"/>
+      <a name="bit3" val="12"/>
     </comp>
-    <comp lib="0" loc="(330,320)" name="Splitter">
-      <a name="fanout" val="9"/>
-      <a name="incoming" val="8"/>
-      <a name="appear" val="center"/>
-      <a name="bit6" val="8"/>
+    <comp lib="4" loc="(470,530)" name="RAM"/>
+    <comp loc="(260,240)" name="keyboardChip"/>
+    <comp lib="0" loc="(420,570)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="R/W"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="3" loc="(450,250)" name="Comparator">
-      <a name="width" val="7"/>
+    <comp lib="0" loc="(300,100)" name="Tunnel">
+      <a name="label" val="tck"/>
+      <a name="labelfont" val="SansSerif plain 6"/>
     </comp>
-    <comp lib="8" loc="(1370,200)" name="ScoreDisplayDriver"/>
-    <comp lib="0" loc="(130,210)" name="Tunnel">
+    <comp lib="0" loc="(870,560)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="tck"/>
+      <a name="labelfont" val="Serif plain 6"/>
+    </comp>
+    <comp lib="0" loc="(110,440)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="IRQ"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1470,200)" name="Tunnel">
-      <a name="label" val="tck"/>
-      <a name="labelfont" val="SansSerif plain 6"/>
+    <comp lib="0" loc="(150,330)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
     </comp>
-    <comp lib="0" loc="(370,200)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="2" loc="(260,410)" name="Decoder">
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(410,180)" name="Constant">
       <a name="width" val="7"/>
-      <a name="label" val="keyboardButton"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+      <a name="value" val="0x64"/>
     </comp>
-    <comp lib="5" loc="(1310,200)" name="Hex Digit Display"/>
-    <comp lib="0" loc="(960,520)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="vec"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="3" loc="(450,170)" name="Comparator">
+      <a name="width" val="7"/>
     </comp>
-    <comp lib="0" loc="(140,520)" name="Tunnel">
-      <a name="label" val="tck"/>
-      <a name="labelfont" val="Serif plain 6"/>
-    </comp>
-    <comp lib="0" loc="(130,230)" name="Pull Resistor">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="7" loc="(230,450)" name="CdM_8_mark5"/>
-    <comp lib="0" loc="(1420,210)" name="Tunnel">
+    <comp lib="0" loc="(280,110)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="IOsel"/>
+      <a name="label" val="R/W"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(130,250)" name="Pull Resistor">
+    <comp lib="1" loc="(250,470)" name="NOT Gate">
       <a name="facing" val="west"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="8" loc="(1010,270)" name="ScoreDisplayDriver"/>
+    <comp lib="0" loc="(400,290)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="IOaddr"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(230,240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Direction"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(380,460)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -342,88 +396,63 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
-    <comp lib="0" loc="(200,390)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
+    <comp lib="0" loc="(950,570)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="R/W"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="2" loc="(260,410)" name="Decoder">
-      <a name="disabled" val="0"/>
+    <comp lib="0" loc="(280,180)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="R/W"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(90,1480)" name="Power"/>
-    <comp lib="0" loc="(870,560)" name="Tunnel">
+    <comp lib="0" loc="(410,220)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x77"/>
+    </comp>
+    <comp lib="0" loc="(330,580)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="tck"/>
-      <a name="labelfont" val="Serif plain 6"/>
+      <a name="label" val="IOsel"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1450,190)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-      <a name="label" val="IOdat"/>
+    <comp lib="0" loc="(250,250)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IOsel"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(270,380)" name="Tunnel">
       <a name="label" val="code"/>
       <a name="labelfont" val="Sitka Heading plain 9"/>
     </comp>
-    <comp lib="0" loc="(330,600)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="data"/>
-      <a name="labelfont" val="Sitka Heading plain 9"/>
-    </comp>
-    <comp lib="0" loc="(250,180)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IOsel"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(950,570)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="R/W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1950,120)" name="Power"/>
-    <comp lib="0" loc="(250,230)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="label" val="IOaddr"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
+    <comp lib="0" loc="(120,520)" name="Clock"/>
     <comp lib="0" loc="(280,250)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="R/W"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp loc="(1190,550)" name="displayControllerChip"/>
-    <comp lib="0" loc="(410,180)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x64"/>
+    <comp lib="0" loc="(330,600)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="data"/>
+      <a name="labelfont" val="Sitka Heading plain 9"/>
     </comp>
-    <comp lib="0" loc="(1420,190)" name="Tunnel">
+    <comp lib="5" loc="(1140,620)" name="Keyboard"/>
+    <comp lib="0" loc="(480,190)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="Direction"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(410,340)" name="Tunnel">
+      <a name="label" val="IOsel"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="3" loc="(450,250)" name="Comparator">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(250,90)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="3"/>
       <a name="label" val="IOaddr"/>
       <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1280,640)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="7"/>
-      <a name="label" val="keyboardButton"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(120,520)" name="Clock"/>
-    <comp lib="0" loc="(480,190)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="13"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="legacy"/>
-      <a name="bit1" val="4"/>
-      <a name="bit2" val="8"/>
-      <a name="bit3" val="12"/>
-    </comp>
-    <comp lib="5" loc="(1060,530)" name="DotMatrix">
-      <a name="matrixcols" val="32"/>
-      <a name="matrixrows" val="32"/>
-      <a name="color" val="#7cff89"/>
-      <a name="offcolor" val="#364016"/>
     </comp>
     <comp lib="0" loc="(280,160)" name="Tunnel">
       <a name="facing" val="south"/>
@@ -431,54 +460,65 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="IOdat"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(960,500)" name="Tunnel">
-      <a name="label" val="IAck"/>
+    <comp lib="5" loc="(1060,530)" name="DotMatrix">
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#7cff89"/>
+      <a name="offcolor" val="#364016"/>
+    </comp>
+    <comp lib="0" loc="(200,390)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1010,280)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="PlayerScore"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(250,440)" name="Tunnel">
-      <a name="label" val="R/W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="0" loc="(400,570)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tck"/>
+      <a name="labelfont" val="Serif plain 6"/>
     </comp>
-    <comp lib="0" loc="(230,240)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="Direction"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(400,290)" name="Tunnel">
+    <comp lib="0" loc="(250,230)" name="Tunnel">
+      <a name="facing" val="south"/>
       <a name="width" val="3"/>
       <a name="label" val="IOaddr"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(960,540)" name="Tunnel">
-      <a name="label" val="IRQ"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(250,470)" name="NOT Gate">
-      <a name="facing" val="west"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(280,180)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="R/W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="5" loc="(1140,620)" name="Keyboard"/>
     <comp lib="1" loc="(400,340)" name="AND Gate">
       <a name="inputs" val="6"/>
     </comp>
-    <comp lib="3" loc="(450,130)" name="Comparator">
-      <a name="width" val="7"/>
+    <comp lib="0" loc="(140,520)" name="Tunnel">
+      <a name="label" val="tck"/>
+      <a name="labelfont" val="Serif plain 6"/>
+    </comp>
+    <comp lib="7" loc="(230,450)" name="CdM_8_mark5"/>
+    <comp lib="0" loc="(280,230)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="IOdat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(130,250)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="data"/>
       <a name="labelfont" val="Sitka Heading plain 9"/>
     </comp>
-    <comp lib="0" loc="(120,390)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
+    <comp lib="0" loc="(90,1480)" name="Power"/>
+    <comp lib="0" loc="(470,340)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="IOdat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
+    <comp lib="0" loc="(130,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="code"/>
+      <a name="labelfont" val="Sitka Heading plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1030,270)" name="Hex Digit Display"/>
     <comp lib="4" loc="(470,420)" name="ROM">
       <a name="contents">addr/data: 8 8
 cd af d0 9 c0 d0 80 c0
@@ -510,77 +550,36 @@ fc a1 c6 c5 c4 ee 6a 39*0
 b8 1
 </a>
     </comp>
-    <comp loc="(260,240)" name="keyboardChip"/>
-    <comp lib="4" loc="(470,530)" name="RAM"/>
-    <comp lib="0" loc="(220,390)" name="Probe">
+    <comp lib="0" loc="(120,390)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
+    <comp loc="(1190,550)" name="displayControllerChip"/>
     <comp lib="0" loc="(370,290)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
       <a name="appear" val="legacy"/>
     </comp>
-    <comp lib="0" loc="(110,480)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IAck"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(420,570)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="R/W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(270,490)" name="Tunnel">
-      <a name="label" val="R/W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
     <comp lib="0" loc="(410,260)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x73"/>
     </comp>
-    <comp lib="0" loc="(470,340)" name="Tunnel">
+    <comp lib="0" loc="(350,370)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="IOdat"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+      <a name="label" val="data"/>
+      <a name="labelfont" val="Sitka Heading plain 9"/>
     </comp>
-    <comp lib="0" loc="(140,350)" name="Probe">
+    <comp lib="0" loc="(880,480)" name="Tunnel">
       <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(150,330)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="3" loc="(450,210)" name="Comparator">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="1" loc="(240,490)" name="Controlled Buffer">
-      <a name="facing" val="west"/>
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(370,590)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-      <a name="negate0" val="true"/>
-    </comp>
-    <comp lib="0" loc="(1450,210)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="R/W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(330,580)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IOsel"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(110,460)" name="Tunnel">
-      <a name="facing" val="east"/>
       <a name="width" val="3"/>
-      <a name="label" val="vec"/>
+      <a name="label" val="IOaddr"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(230,100)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="PlayerScore"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
   </circuit>
@@ -619,8 +618,6 @@ b8 1
     </appear>
     <wire from="(1340,140)" to="(1340,160)"/>
     <wire from="(1420,140)" to="(1420,160)"/>
-    <wire from="(650,250)" to="(650,260)"/>
-    <wire from="(640,240)" to="(640,250)"/>
     <wire from="(1180,140)" to="(1180,160)"/>
     <wire from="(1260,140)" to="(1260,160)"/>
     <wire from="(1360,230)" to="(1360,1090)"/>
@@ -690,7 +687,6 @@ b8 1
     <wire from="(850,140)" to="(860,140)"/>
     <wire from="(820,430)" to="(830,430)"/>
     <wire from="(50,180)" to="(50,240)"/>
-    <wire from="(640,250)" to="(650,250)"/>
     <wire from="(1320,140)" to="(1320,160)"/>
     <wire from="(1400,140)" to="(1400,160)"/>
     <wire from="(1230,410)" to="(1470,410)"/>
@@ -928,82 +924,16 @@ b8 1
     <wire from="(50,240)" to="(50,300)"/>
     <wire from="(650,80)" to="(660,80)"/>
     <wire from="(980,870)" to="(1060,870)"/>
-    <comp lib="0" loc="(730,70)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
+    <comp lib="0" loc="(790,1110)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-2_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(80,70)" name="Pin">
+      <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="DATA"/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="SansSerif plain 8"/>
-    </comp>
-    <comp lib="0" loc="(540,510)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Coordinate"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1200,220)" name="smallOR (16 bit)"/>
-    <comp lib="8" loc="(1300,170)" name="bitExtender (16-32)"/>
-    <comp lib="2" loc="(1040,1050)" name="Demultiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="16"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="0" loc="(1340,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
+      <a name="label" val="SEL"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(690,260)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="T2"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="2" loc="(980,720)" name="Demultiplexer">
-      <a name="facing" val="north"/>
-      <a name="select" val="4"/>
-      <a name="width" val="16"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="0" loc="(740,690)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="Free_X"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1340,170)" name="bitExtender (16-32)"/>
-    <comp lib="1" loc="(100,540)" name="Controlled Inverter">
-      <a name="size" val="20"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="6" loc="(775,391)" name="Text">
-      <a name="text" val="Snake tail"/>
-      <a name="font" val="Unispace bold 22"/>
-    </comp>
-    <comp lib="0" loc="(860,500)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Free lock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(370,120)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="TICK"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(640,590)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="4"/>
-      <a name="label" val="HEADY"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1220,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(490,60)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IO-0_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(1140,140)" name="Pin">
       <a name="facing" val="south"/>
@@ -1011,45 +941,133 @@ b8 1
       <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="2" loc="(780,700)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="width" val="4"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="0" loc="(170,290)" name="Tunnel">
-      <a name="label" val="IO-5_update"/>
+    <comp lib="0" loc="(490,60)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IO-0_update"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="1" loc="(850,120)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="4" loc="(120,430)" name="D Flip-Flop">
+    <comp lib="4" loc="(150,530)" name="Counter">
+      <a name="ongoal" val="stay"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="0" loc="(50,70)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ADDRESS"/>
-      <a name="labelloc" val="north"/>
+    <comp lib="0" loc="(930,890)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-2_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1200,140)" name="Pin">
+    <comp lib="0" loc="(870,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="update_screen"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(500,70)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Coordinate"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1300,140)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="6" loc="(875,25)" name="Text">
-      <a name="text" val="Screen update"/>
-      <a name="font" val="Unispace bold 11"/>
+    <comp lib="1" loc="(210,570)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
     </comp>
-    <comp lib="6" loc="(163,32)" name="Text">
-      <a name="text" val="I/O interface"/>
-      <a name="font" val="Unispace plain 20"/>
+    <comp lib="6" loc="(316,617)" name="Text">
+      <a name="text" val="Preloaded images"/>
+      <a name="font" val="Impact bold 12"/>
     </comp>
+    <comp lib="0" loc="(750,730)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="Free_Column"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="4" loc="(120,430)" name="D Flip-Flop">
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="1" loc="(560,600)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(1340,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(548,476)" name="Text">
+      <a name="text" val="Snake head"/>
+      <a name="font" val="Unispace bold 22"/>
+    </comp>
+    <comp lib="0" loc="(760,760)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="Free lock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(890,1100)" name="Pull Resistor"/>
+    <comp lib="0" loc="(1020,1050)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+      <a name="appear" val="legacy"/>
+    </comp>
+    <comp lib="6" loc="(648,159)" name="Text">
+      <a name="text" val="Selector"/>
+      <a name="font" val="Unispace bold 18"/>
+    </comp>
+    <comp lib="0" loc="(540,600)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Coordinate"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(130,640)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="LoadImageNum"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1240,220)" name="smallOR (16 bit)"/>
+    <comp lib="4" loc="(610,600)" name="Register">
+      <a name="width" val="4"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(640,590)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="HEADY"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(250,400)" name="Tunnel">
+      <a name="label" val="restart_cap"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(130,70)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="R/W"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="8" loc="(1160,220)" name="smallOR (16 bit)"/>
     <comp lib="4" loc="(950,960)" name="Register">
       <a name="width" val="4"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(860,140)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="T3"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1400,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(260,650)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="Free_Column"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="4" loc="(820,430)" name="Register">
       <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(370,70)" name="Pin">
@@ -1059,245 +1077,67 @@ b8 1
       <a name="label" val="DATA"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="1" loc="(210,570)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="8" loc="(1380,220)" name="smallOR (16 bit)"/>
-    <comp lib="8" loc="(1200,170)" name="bitExtender (16-32)"/>
-    <comp lib="0" loc="(640,500)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="4"/>
-      <a name="label" val="HEADX"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1240,170)" name="bitExtender (16-32)"/>
-    <comp lib="1" loc="(210,390)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="2" loc="(640,610)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="6" loc="(56,488)" name="Text">
-      <a name="text" val="0 - &quot;Lose&quot;"/>
-      <a name="font" val="Verdana bolditalic 13"/>
-    </comp>
-    <comp lib="0" loc="(210,590)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="Free lock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1160,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(500,50)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Data"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(130,640)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="LoadImageNum"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(70,1890)" name="Power"/>
-    <comp lib="0" loc="(980,860)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="4"/>
-      <a name="label" val="APPLEX"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(370,70)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Data"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="6" loc="(193,361)" name="Text">
-      <a name="text" val="Free draw block"/>
-      <a name="font" val="Unispace bold 16"/>
-    </comp>
-    <comp lib="0" loc="(1260,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(150,530)" name="Counter">
-      <a name="ongoal" val="stay"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="1" loc="(170,170)" name="AND Gate">
-      <a name="label" val="IO-0W"/>
-      <a name="negate0" val="true"/>
-      <a name="negate2" val="true"/>
-      <a name="negate3" val="true"/>
-      <a name="negate4" val="true"/>
-    </comp>
-    <comp lib="8" loc="(1320,220)" name="smallOR (16 bit)"/>
-    <comp lib="8" loc="(1180,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(830,920)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Data"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(650,80)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="HEADY"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="4" loc="(820,430)" name="Register">
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="1" loc="(720,70)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(650,260)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IACK"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(120,450)" name="Tunnel">
-      <a name="label" val="LoadImageNum"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(780,430)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(1360,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(500,70)" name="Controlled Buffer">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="8" loc="(1140,170)" name="bitExtender (16-32)"/>
-    <comp lib="0" loc="(710,90)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-0_Read"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(870,50)" name="OR Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1420,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="8" loc="(1120,170)" name="bitExtender (16-32)"/>
-    <comp lib="0" loc="(60,530)" name="Power">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(1246,50)" name="Text">
-      <a name="text" val="To screen"/>
-      <a name="font" val="Unispace bold 22"/>
-    </comp>
-    <comp lib="0" loc="(550,590)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="T1"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(680,690)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-      <a name="appear" val="legacy"/>
-    </comp>
-    <comp lib="0" loc="(80,70)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SEL"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(160,650)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="Free_X"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1280,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(760,760)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="Free lock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1240,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(170,290)" name="AND Gate">
-      <a name="label" val="IO-5W"/>
-      <a name="negate0" val="true"/>
-      <a name="negate3" val="true"/>
-    </comp>
-    <comp lib="0" loc="(1020,1050)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-      <a name="appear" val="legacy"/>
-    </comp>
-    <comp lib="8" loc="(1140,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(80,430)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IO-5_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1400,170)" name="bitExtender (16-32)"/>
-    <comp lib="4" loc="(300,530)" name="ROM">
-      <a name="dataWidth" val="16"/>
-      <a name="contents">addr/data: 8 16
-0 1ff8 8 0 1ff8 1008 1ff8 0
-f08 1088 1070 0 1ff8 1088 1008 0
-0 ff8 4 7f8 4 ff8 0 bfc
-0 ffc 400 380 70 8 ffc
-</a>
-    </comp>
-    <comp lib="0" loc="(260,650)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="Free_Column"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1320,170)" name="bitExtender (16-32)"/>
     <comp lib="0" loc="(1380,140)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(1260,170)" name="bitExtender (16-32)"/>
-    <comp lib="6" loc="(56,503)" name="Text">
-      <a name="text" val="16 - &quot;Win&quot;"/>
-      <a name="font" val="Verdana bolditalic 13"/>
+    <comp lib="8" loc="(1420,170)" name="bitExtender (16-32)"/>
+    <comp lib="0" loc="(680,690)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+      <a name="appear" val="legacy"/>
     </comp>
-    <comp lib="0" loc="(750,730)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="Free_Column"/>
+    <comp lib="6" loc="(1246,50)" name="Text">
+      <a name="text" val="To screen"/>
+      <a name="font" val="Unispace bold 22"/>
+    </comp>
+    <comp lib="0" loc="(1280,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(760,680)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="Free lock"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(130,70)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="R/W"/>
-      <a name="labelloc" val="north"/>
+    <comp lib="0" loc="(170,290)" name="Tunnel">
+      <a name="label" val="IO-5_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
+    <comp lib="0" loc="(800,450)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-0_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(720,70)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="6" loc="(842,1082)" name="Text">
+      <a name="text" val="Show apple"/>
+      <a name="font" val="SansSerif bolditalic 14"/>
+    </comp>
+    <comp lib="0" loc="(860,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Free lock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1300,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(730,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="DATA"/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="SansSerif plain 8"/>
+    </comp>
+    <comp lib="8" loc="(1140,170)" name="bitExtender (16-32)"/>
+    <comp lib="1" loc="(100,520)" name="Controlled Buffer"/>
     <comp lib="0" loc="(680,70)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="8"/>
@@ -1310,66 +1150,143 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="2" loc="(960,1050)" name="Demultiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="disabled" val="0"/>
+    <comp lib="6" loc="(56,503)" name="Text">
+      <a name="text" val="16 - &quot;Win&quot;"/>
+      <a name="font" val="Verdana bolditalic 13"/>
     </comp>
-    <comp lib="0" loc="(90,300)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-      <a name="appear" val="legacy"/>
+    <comp lib="0" loc="(370,120)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="TICK"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="1" loc="(850,920)" name="Controlled Buffer">
-      <a name="width" val="8"/>
+    <comp lib="0" loc="(120,450)" name="Tunnel">
+      <a name="label" val="LoadImageNum"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="2" loc="(680,220)" name="Decoder">
+    <comp lib="6" loc="(875,25)" name="Text">
+      <a name="text" val="Screen update"/>
+      <a name="font" val="Unispace bold 11"/>
+    </comp>
+    <comp lib="8" loc="(1160,170)" name="bitExtender (16-32)"/>
+    <comp lib="1" loc="(210,390)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(740,690)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Free_X"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1140,220)" name="smallOR (16 bit)"/>
+    <comp lib="8" loc="(1380,170)" name="bitExtender (16-32)"/>
+    <comp lib="6" loc="(56,488)" name="Text">
+      <a name="text" val="0 - &quot;Lose&quot;"/>
+      <a name="font" val="Verdana bolditalic 13"/>
+    </comp>
+    <comp lib="0" loc="(550,500)" name="Tunnel">
       <a name="facing" val="south"/>
-      <a name="select" val="2"/>
-      <a name="disabled" val="0"/>
+      <a name="label" val="T2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
+    <comp lib="8" loc="(1320,170)" name="bitExtender (16-32)"/>
+    <comp lib="1" loc="(870,50)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(840,930)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-2_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1420,220)" name="smallOR (16 bit)"/>
     <comp lib="0" loc="(590,620)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="IO-0_update"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="6" loc="(316,617)" name="Text">
-      <a name="text" val="Preloaded images"/>
-      <a name="font" val="Impact bold 12"/>
+    <comp lib="0" loc="(1050,560)" name="Tunnel">
+      <a name="label" val="restart_cap"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(870,50)" name="Tunnel">
+    <comp lib="8" loc="(1300,170)" name="bitExtender (16-32)"/>
+    <comp lib="8" loc="(1180,170)" name="bitExtender (16-32)"/>
+    <comp lib="8" loc="(1220,220)" name="smallOR (16 bit)"/>
+    <comp lib="1" loc="(170,230)" name="AND Gate">
+      <a name="label" val="IO-2W"/>
+      <a name="negate0" val="true"/>
+      <a name="negate2" val="true"/>
+      <a name="negate4" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1320,140)" name="Pin">
       <a name="facing" val="south"/>
-      <a name="label" val="update_screen"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(160,650)" name="Counter">
-      <a name="width" val="4"/>
-      <a name="max" val="0xf"/>
-      <a name="ongoal" val="stay"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="2" loc="(850,600)" name="Demultiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="16"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="1" loc="(560,510)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="4" loc="(610,600)" name="Register">
-      <a name="width" val="4"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(860,140)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="T3"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="0" loc="(830,1120)" name="Ground">
+      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(120,410)" name="Tunnel">
       <a name="label" val="Free lock"/>
       <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="2" loc="(780,700)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="4"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(60,530)" name="Power">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(540,510)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Coordinate"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp loc="(970,600)" name="capacitorModule (16x16)"/>
+    <comp lib="1" loc="(560,510)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="8" loc="(1240,170)" name="bitExtender (16-32)"/>
+    <comp lib="6" loc="(193,361)" name="Text">
+      <a name="text" val="Free draw block"/>
+      <a name="font" val="Unispace bold 16"/>
+    </comp>
+    <comp lib="4" loc="(120,390)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(980,950)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="APPLEY"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(680,180)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="IO-0_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1360,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1240,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(80,430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IO-5_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="6" loc="(841,819)" name="Text">
+      <a name="text" val="Apple draw"/>
+      <a name="font" val="Unispace bold 22"/>
     </comp>
     <comp lib="0" loc="(900,870)" name="Splitter">
       <a name="fanout" val="1"/>
@@ -1383,31 +1300,109 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="bit6" val="none"/>
       <a name="bit7" val="none"/>
     </comp>
-    <comp lib="4" loc="(870,1100)" name="J-K Flip-Flop"/>
-    <comp lib="8" loc="(1240,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(170,170)" name="Tunnel">
-      <a name="label" val="IO-0_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(800,450)" name="Tunnel">
+    <comp lib="0" loc="(700,280)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="IO-0_update"/>
+      <a name="label" val="T3"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(80,390)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IO-5_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="2" loc="(1040,1050)" name="Demultiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="16"/>
+      <a name="disabled" val="0"/>
     </comp>
     <comp lib="4" loc="(950,870)" name="Register">
       <a name="width" val="4"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="6" loc="(643,30)" name="Text">
-      <a name="text" val="Data out"/>
-      <a name="font" val="Unispace bold 16"/>
+    <comp lib="4" loc="(650,220)" name="Counter">
+      <a name="width" val="2"/>
+      <a name="max" val="0x2"/>
+      <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="8" loc="(1180,170)" name="bitExtender (16-32)"/>
+    <comp lib="0" loc="(630,280)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-0_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1280,170)" name="bitExtender (16-32)"/>
+    <comp lib="0" loc="(80,390)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IO-5_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1200,170)" name="bitExtender (16-32)"/>
+    <comp lib="8" loc="(1120,170)" name="bitExtender (16-32)"/>
+    <comp lib="0" loc="(590,530)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-0_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(130,570)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-5_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(170,110)" name="AND Gate">
+      <a name="label" val="IO-0R"/>
+      <a name="negate2" val="true"/>
+      <a name="negate3" val="true"/>
+      <a name="negate4" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1180,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(1360,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(500,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Data"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(140,670)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-5_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1260,170)" name="bitExtender (16-32)"/>
+    <comp lib="1" loc="(170,290)" name="AND Gate">
+      <a name="label" val="IO-5W"/>
+      <a name="negate0" val="true"/>
+      <a name="negate3" val="true"/>
+    </comp>
+    <comp lib="2" loc="(960,1050)" name="Demultiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="2" loc="(810,520)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(960,1050)" name="Pull Resistor">
+      <a name="facing" val="east"/>
+      <a name="pull" val="X"/>
+    </comp>
+    <comp lib="8" loc="(1280,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(830,430)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="incoming" val="8"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+    </comp>
+    <comp lib="0" loc="(890,1100)" name="Tunnel">
+      <a name="label" val="enable_apple"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
     <comp lib="0" loc="(900,960)" name="Splitter">
       <a name="fanout" val="1"/>
       <a name="incoming" val="8"/>
@@ -1421,233 +1416,23 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="bit6" val="0"/>
       <a name="bit7" val="0"/>
     </comp>
-    <comp lib="0" loc="(1220,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(890,1100)" name="Pull Resistor"/>
-    <comp lib="8" loc="(1300,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(680,240)" name="Tunnel">
+    <comp lib="0" loc="(710,90)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="T1"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1360,170)" name="bitExtender (16-32)"/>
-    <comp lib="0" loc="(980,950)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="4"/>
-      <a name="label" val="APPLEY"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1280,170)" name="bitExtender (16-32)"/>
-    <comp lib="0" loc="(90,240)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-      <a name="appear" val="legacy"/>
-    </comp>
-    <comp lib="0" loc="(880,160)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-5_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp loc="(970,600)" name="capacitorModule (16x16)"/>
-    <comp lib="0" loc="(850,600)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-      <a name="appear" val="legacy"/>
-    </comp>
-    <comp lib="0" loc="(70,550)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="LoadImageNum"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1340,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(680,180)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="IO-0_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(860,80)" name="NOR Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(790,1110)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-2_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="2" loc="(810,520)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="6" loc="(282,466)" name="Text">
-      <a name="text" val="Disable other drawing devices"/>
-      <a name="font" val="Impact bold 12"/>
-    </comp>
-    <comp lib="1" loc="(560,600)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="8" loc="(1380,170)" name="bitExtender (16-32)"/>
-    <comp lib="6" loc="(842,1082)" name="Text">
-      <a name="text" val="Show apple"/>
-      <a name="font" val="SansSerif bolditalic 14"/>
-    </comp>
-    <comp lib="0" loc="(90,180)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-      <a name="appear" val="legacy"/>
-    </comp>
-    <comp lib="0" loc="(300,530)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="Preload_IMG"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(590,530)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-0_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(760,430)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Coordinate"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1050,560)" name="Tunnel">
-      <a name="label" val="restart_cap"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(550,500)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="T2"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(170,110)" name="Tunnel">
       <a name="label" val="IO-0_Read"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="2" loc="(780,740)" name="Multiplexer">
-      <a name="width" val="16"/>
-      <a name="disabled" val="0"/>
+    <comp lib="0" loc="(370,120)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="TICK"/>
     </comp>
-    <comp lib="1" loc="(170,230)" name="AND Gate">
-      <a name="label" val="IO-2W"/>
-      <a name="negate0" val="true"/>
-      <a name="negate2" val="true"/>
-      <a name="negate4" val="true"/>
-    </comp>
-    <comp lib="8" loc="(1260,220)" name="smallOR (16 bit)"/>
-    <comp lib="8" loc="(1420,220)" name="smallOR (16 bit)"/>
-    <comp lib="1" loc="(890,1100)" name="Controlled Buffer"/>
-    <comp lib="0" loc="(170,230)" name="Tunnel">
-      <a name="label" val="IO-2_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="6" loc="(548,476)" name="Text">
-      <a name="text" val="Snake head"/>
-      <a name="font" val="Unispace bold 22"/>
-    </comp>
-    <comp lib="0" loc="(260,650)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="Preload_IMG"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
+    <comp lib="4" loc="(870,1100)" name="J-K Flip-Flop"/>
     <comp lib="0" loc="(650,50)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="4"/>
       <a name="label" val="HEADX"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1300,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="8" loc="(1220,170)" name="bitExtender (16-32)"/>
-    <comp lib="8" loc="(1160,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(890,1120)" name="Tunnel">
-      <a name="label" val="Free lock"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(170,110)" name="AND Gate">
-      <a name="label" val="IO-0R"/>
-      <a name="negate2" val="true"/>
-      <a name="negate3" val="true"/>
-      <a name="negate4" val="true"/>
-    </comp>
-    <comp lib="0" loc="(140,670)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-5_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="8" loc="(1120,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(1400,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(830,430)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="incoming" val="8"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-    </comp>
-    <comp lib="6" loc="(841,819)" name="Text">
-      <a name="text" val="Apple draw"/>
-      <a name="font" val="Unispace bold 22"/>
-    </comp>
-    <comp lib="0" loc="(840,930)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-2_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(240,400)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1120,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(650,220)" name="Counter">
-      <a name="width" val="2"/>
-      <a name="max" val="0x2"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(1180,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(648,159)" name="Text">
-      <a name="text" val="Selector"/>
-      <a name="font" val="Unispace bold 18"/>
-    </comp>
-    <comp lib="0" loc="(800,520)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="T3"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="4" loc="(120,390)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(100,520)" name="Controlled Buffer"/>
-    <comp lib="8" loc="(1160,170)" name="bitExtender (16-32)"/>
     <comp lib="0" loc="(560,600)" name="Splitter">
       <a name="fanout" val="1"/>
       <a name="incoming" val="8"/>
@@ -1660,14 +1445,71 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="bit6" val="none"/>
       <a name="bit7" val="none"/>
     </comp>
-    <comp lib="0" loc="(130,570)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-5_update"/>
+    <comp lib="0" loc="(980,860)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="APPLEX"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="6" loc="(322,696)" name="Text">
-      <a name="text" val="Draw processor"/>
-      <a name="font" val="Impact bold 12"/>
+    <comp lib="0" loc="(640,500)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="HEADX"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(240,400)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1400,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(3010,110)" name="Power"/>
+    <comp lib="4" loc="(300,530)" name="ROM">
+      <a name="dataWidth" val="16"/>
+      <a name="contents">addr/data: 8 16
+0 1ff8 8 0 1ff8 1008 1ff8 0
+f08 1088 1070 0 1ff8 1088 1008 0
+0 ff8 4 7f8 4 ff8 0 bfc
+0 ffc 400 380 70 8 ffc
+</a>
+    </comp>
+    <comp lib="0" loc="(370,70)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Data"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(170,230)" name="Tunnel">
+      <a name="label" val="IO-2_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1120,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(850,920)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="4" loc="(610,510)" name="Register">
+      <a name="width" val="4"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(160,650)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="Free_X"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="4" loc="(160,650)" name="Counter">
+      <a name="width" val="4"/>
+      <a name="max" val="0xf"/>
+      <a name="ongoal" val="stay"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(560,510)" name="Splitter">
       <a name="fanout" val="1"/>
@@ -1681,46 +1523,65 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="bit6" val="none"/>
       <a name="bit7" val="none"/>
     </comp>
-    <comp lib="0" loc="(760,680)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="Free lock"/>
+    <comp lib="8" loc="(1220,170)" name="bitExtender (16-32)"/>
+    <comp lib="0" loc="(830,920)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Data"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(930,980)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-2_update"/>
+    <comp lib="0" loc="(300,530)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="Preload_IMG"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(3010,110)" name="Power"/>
-    <comp lib="0" loc="(370,120)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="TICK"/>
-    </comp>
-    <comp lib="8" loc="(1420,170)" name="bitExtender (16-32)"/>
-    <comp lib="8" loc="(1400,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(700,280)" name="Tunnel">
+    <comp lib="2" loc="(980,720)" name="Demultiplexer">
       <a name="facing" val="north"/>
+      <a name="select" val="4"/>
+      <a name="width" val="16"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="6" loc="(643,30)" name="Text">
+      <a name="text" val="Data out"/>
+      <a name="font" val="Unispace bold 16"/>
+    </comp>
+    <comp lib="8" loc="(1340,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(80,450)" name="Power">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(770,420)" name="Tunnel">
+      <a name="facing" val="south"/>
       <a name="label" val="T3"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1020,920)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="enable_apple"/>
+    <comp lib="0" loc="(1050,640)" name="Tunnel">
+      <a name="label" val="update_screen"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1320,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(90,300)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="legacy"/>
     </comp>
-    <comp lib="6" loc="(233,486)" name="Text">
-      <a name="text" val="Preloaded images"/>
-      <a name="font" val="SimSun italic 14"/>
+    <comp lib="0" loc="(680,240)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="T1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(80,450)" name="Power">
+    <comp lib="2" loc="(780,740)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(850,600)" name="Splitter">
       <a name="facing" val="west"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+      <a name="appear" val="legacy"/>
+    </comp>
+    <comp lib="0" loc="(70,550)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="LoadImageNum"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(120,530)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1728,67 +1589,197 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="Data"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="4" loc="(610,510)" name="Register">
-      <a name="width" val="4"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(770,420)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="T3"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(500,70)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Coordinate"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
     <comp lib="0" loc="(90,120)" name="Splitter">
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
       <a name="appear" val="legacy"/>
     </comp>
-    <comp lib="0" loc="(930,890)" name="Tunnel">
+    <comp lib="0" loc="(210,590)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="IO-2_update"/>
+      <a name="label" val="Free lock"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(540,600)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="1" loc="(780,430)" name="Controlled Buffer">
       <a name="width" val="8"/>
-      <a name="label" val="Coordinate"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+      <a name="control" val="left"/>
     </comp>
-    <comp lib="0" loc="(1050,640)" name="Tunnel">
-      <a name="label" val="update_screen"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="0" loc="(90,240)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="legacy"/>
     </comp>
-    <comp lib="8" loc="(1360,220)" name="smallOR (16 bit)"/>
-    <comp lib="0" loc="(960,1050)" name="Pull Resistor">
-      <a name="facing" val="east"/>
-      <a name="pull" val="X"/>
+    <comp lib="0" loc="(90,180)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="legacy"/>
     </comp>
-    <comp lib="0" loc="(630,280)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-0_update"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(890,1100)" name="Tunnel">
-      <a name="label" val="enable_apple"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(250,400)" name="Tunnel">
-      <a name="label" val="restart_cap"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1280,140)" name="Pin">
+    <comp lib="0" loc="(70,1890)" name="Power"/>
+    <comp lib="0" loc="(1260,140)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(830,1120)" name="Ground">
-      <a name="facing" val="west"/>
+    <comp lib="1" loc="(100,540)" name="Controlled Inverter">
+      <a name="size" val="20"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(1160,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(1340,170)" name="bitExtender (16-32)"/>
+    <comp lib="2" loc="(640,610)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="1" loc="(850,120)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(170,170)" name="Tunnel">
+      <a name="label" val="IO-0_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="6" loc="(775,391)" name="Text">
+      <a name="text" val="Snake tail"/>
+      <a name="font" val="Unispace bold 22"/>
+    </comp>
+    <comp lib="0" loc="(1420,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(1380,220)" name="smallOR (16 bit)"/>
+    <comp lib="6" loc="(282,466)" name="Text">
+      <a name="text" val="Disable other drawing devices"/>
+      <a name="font" val="Impact bold 12"/>
+    </comp>
+    <comp lib="0" loc="(930,980)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-2_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(690,260)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="T2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1200,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(800,520)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="T3"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1220,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(890,1100)" name="Controlled Buffer"/>
+    <comp lib="8" loc="(1400,170)" name="bitExtender (16-32)"/>
+    <comp lib="0" loc="(890,1120)" name="Tunnel">
+      <a name="label" val="Free lock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(650,80)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="HEADY"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="2" loc="(680,220)" name="Decoder">
+      <a name="facing" val="south"/>
+      <a name="select" val="2"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="1" loc="(170,170)" name="AND Gate">
+      <a name="label" val="IO-0W"/>
+      <a name="negate0" val="true"/>
+      <a name="negate2" val="true"/>
+      <a name="negate3" val="true"/>
+      <a name="negate4" val="true"/>
+    </comp>
+    <comp lib="1" loc="(860,80)" name="NOR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="8" loc="(1360,170)" name="bitExtender (16-32)"/>
+    <comp lib="8" loc="(1260,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(550,590)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="T1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1180,220)" name="smallOR (16 bit)"/>
+    <comp lib="6" loc="(163,32)" name="Text">
+      <a name="text" val="I/O interface"/>
+      <a name="font" val="Unispace plain 20"/>
+    </comp>
+    <comp lib="0" loc="(1020,920)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="enable_apple"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1320,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(50,70)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ADDRESS"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(170,110)" name="Tunnel">
+      <a name="label" val="IO-0_Read"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="8" loc="(1120,220)" name="smallOR (16 bit)"/>
+    <comp lib="0" loc="(880,160)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-5_update"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(760,430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Coordinate"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(260,650)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="Preload_IMG"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="6" loc="(233,486)" name="Text">
+      <a name="text" val="Preloaded images"/>
+      <a name="font" val="SimSun italic 14"/>
+    </comp>
+    <comp lib="2" loc="(850,600)" name="Demultiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="16"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="6" loc="(322,696)" name="Text">
+      <a name="text" val="Draw processor"/>
+      <a name="font" val="Impact bold 12"/>
+    </comp>
+    <comp lib="0" loc="(1200,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(500,70)" name="Controlled Buffer">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
     </comp>
   </circuit>
   <circuit name="keyboardChip">
@@ -1944,21 +1935,68 @@ f08 1088 1070 0 1ff8 1088 1008 0
     <wire from="(80,140)" to="(150,140)"/>
     <wire from="(730,200)" to="(740,200)"/>
     <wire from="(520,180)" to="(590,180)"/>
-    <comp lib="0" loc="(110,160)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(370,130)" name="Pin">
+    <comp lib="4" loc="(770,200)" name="Register">
       <a name="width" val="4"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(70,70)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="Control"/>
+      <a name="label" val="ADDRESS"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(730,180)" name="Tunnel">
-      <a name="facing" val="south"/>
+    <comp lib="6" loc="(416,143)" name="Text">
+      <a name="text" val="UP"/>
+      <a name="font" val="Tahoma plain 12"/>
+    </comp>
+    <comp lib="0" loc="(500,580)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IO-3R"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="6" loc="(415,45)" name="Text">
+      <a name="text" val="LEFT"/>
+      <a name="font" val="Tahoma plain 12"/>
+    </comp>
+    <comp lib="1" loc="(150,460)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(630,250)" name="Pull Resistor"/>
+    <comp lib="0" loc="(190,510)" name="Tunnel">
+      <a name="label" val="t1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(630,280)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="6" loc="(777,59)" name="Text">
+      <a name="text" val="Key controller"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp lib="4" loc="(720,200)" name="Register">
       <a name="width" val="4"/>
-      <a name="label" val="Direction"/>
+    </comp>
+    <comp lib="0" loc="(140,560)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IO-3W"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(610,200)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="1" loc="(480,220)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(510,590)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="data_out"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="4" loc="(240,230)" name="Counter">
@@ -1967,19 +2005,64 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="ongoal" val="stay"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="4" loc="(720,200)" name="Register">
-      <a name="width" val="4"/>
+    <comp lib="6" loc="(130,367)" name="Text">
+      <a name="text" val="Address storage"/>
+      <a name="font" val="SansSerif plain 24"/>
     </comp>
-    <comp lib="1" loc="(430,420)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(510,570)" name="Controlled Buffer">
+    <comp lib="0" loc="(410,580)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Direction"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="1" loc="(690,260)" name="OR Gate">
-      <a name="inputs" val="4"/>
+    <comp lib="0" loc="(620,240)" name="Pull Resistor"/>
+    <comp lib="0" loc="(340,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="t1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(470,270)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Previous Direction"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(340,500)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="t3"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(230,270)" name="Tunnel">
+      <a name="label" val="IO-3W"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(810,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Previous Direction"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(460,220)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(500,220)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(110,280)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="1" loc="(440,220)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(200,270)" name="AND Gate">
+      <a name="label" val="IO-3W"/>
+      <a name="negate0" val="true"/>
+      <a name="negate4" val="true"/>
     </comp>
     <comp lib="0" loc="(130,70)" name="Pin">
       <a name="facing" val="south"/>
@@ -1987,15 +2070,63 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="SEL"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(170,430)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="2"/>
-      <a name="label" val="selector"/>
+    <comp lib="0" loc="(340,560)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="t4"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(340,380)" name="Tunnel">
+    <comp lib="4" loc="(360,420)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(730,180)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Direction"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(750,220)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="t1"/>
+      <a name="label" val="IO-3R"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(490,50)" name="Controlled Buffer"/>
+    <comp lib="0" loc="(500,450)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(250,540)" name="Tunnel">
+      <a name="label" val="t4"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="6" loc="(252,59)" name="Text">
+      <a name="text" val="I/O interface"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp lib="2" loc="(170,550)" name="Decoder">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="1" loc="(390,540)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(130,430)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="IO-3W"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="6" loc="(416,95)" name="Text">
+      <a name="text" val="RIGHT"/>
+      <a name="font" val="Tahoma plain 12"/>
+    </comp>
+    <comp lib="4" loc="(360,360)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(110,160)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(340,440)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="t2"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(370,130)" name="Splitter">
@@ -2003,23 +2134,63 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="incoming" val="4"/>
       <a name="appear" val="center"/>
     </comp>
-    <comp lib="4" loc="(770,200)" name="Register">
-      <a name="width" val="4"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="2" loc="(170,550)" name="Decoder">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="0" loc="(340,440)" name="Tunnel">
+    <comp lib="0" loc="(470,270)" name="Splitter">
       <a name="facing" val="north"/>
-      <a name="label" val="t2"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="4"/>
+      <a name="bit3" val="6"/>
+    </comp>
+    <comp lib="1" loc="(510,100)" name="Controlled Buffer"/>
+    <comp lib="1" loc="(200,150)" name="AND Gate">
+      <a name="label" val="IO-3R"/>
+      <a name="negate4" val="true"/>
+    </comp>
+    <comp lib="0" loc="(260,230)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="selector"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="1" loc="(470,210)" name="Controlled Buffer"/>
+    <comp lib="0" loc="(370,130)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Control"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(360,540)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(170,560)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="label" val="selector"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(430,420)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(170,430)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="label" val="selector"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="2" loc="(150,460)" name="Demultiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="1" loc="(450,150)" name="Controlled Buffer"/>
     <comp lib="4" loc="(360,480)" name="Register">
       <a name="trigger" val="high"/>
     </comp>
+    <comp lib="0" loc="(210,520)" name="Tunnel">
+      <a name="label" val="t2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(470,210)" name="Controlled Buffer"/>
     <comp lib="0" loc="(410,580)" name="Splitter">
       <a name="facing" val="north"/>
       <a name="fanout" val="8"/>
@@ -2029,64 +2200,12 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="bit2" val="4"/>
       <a name="bit3" val="6"/>
     </comp>
-    <comp lib="1" loc="(460,220)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
+    <comp lib="1" loc="(690,260)" name="OR Gate">
+      <a name="inputs" val="4"/>
     </comp>
     <comp lib="6" loc="(415,203)" name="Text">
       <a name="text" val="DOWN"/>
       <a name="font" val="Tahoma plain 12"/>
-    </comp>
-    <comp lib="0" loc="(140,560)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-3W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(340,560)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="t4"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(500,220)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(630,280)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(260,230)" name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="selector"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(150,460)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(450,360)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(480,220)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(200,150)" name="AND Gate">
-      <a name="label" val="IO-3R"/>
-      <a name="negate4" val="true"/>
-    </comp>
-    <comp lib="0" loc="(180,70)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="R/W"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(510,570)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="DATA"/>
-      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(120,460)" name="Pin">
       <a name="width" val="8"/>
@@ -2098,170 +2217,42 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="IO-3R"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(610,200)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(110,280)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="1" loc="(390,540)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="6" loc="(415,45)" name="Text">
-      <a name="text" val="LEFT"/>
-      <a name="font" val="Tahoma plain 12"/>
-    </comp>
-    <comp lib="2" loc="(150,460)" name="Demultiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="2"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="4" loc="(360,540)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(440,220)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(510,100)" name="Controlled Buffer"/>
-    <comp lib="6" loc="(252,59)" name="Text">
-      <a name="text" val="I/O interface"/>
-      <a name="font" val="SansSerif plain 20"/>
-    </comp>
-    <comp lib="1" loc="(490,50)" name="Controlled Buffer"/>
-    <comp lib="6" loc="(416,143)" name="Text">
-      <a name="text" val="UP"/>
-      <a name="font" val="Tahoma plain 12"/>
-    </comp>
-    <comp lib="0" loc="(410,580)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="4"/>
-      <a name="label" val="Direction"/>
+    <comp lib="0" loc="(230,530)" name="Tunnel">
+      <a name="label" val="t3"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(620,270)" name="Pull Resistor">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(70,70)" name="Pin">
+    <comp lib="1" loc="(410,480)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(450,360)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(510,570)" name="Pin">
       <a name="facing" val="south"/>
-      <a name="width" val="3"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="ADDRESS"/>
+      <a name="label" val="DATA"/>
       <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="1" loc="(510,570)" name="Controlled Buffer">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
     </comp>
     <comp lib="0" loc="(510,450)" name="Tunnel">
       <a name="width" val="8"/>
       <a name="label" val="data_out"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(510,590)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="8"/>
-      <a name="label" val="data_out"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="6" loc="(777,59)" name="Text">
-      <a name="text" val="Key controller"/>
-      <a name="font" val="SansSerif plain 20"/>
-    </comp>
-    <comp lib="0" loc="(250,540)" name="Tunnel">
-      <a name="label" val="t4"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(810,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="4"/>
-      <a name="label" val="Previous Direction"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(230,270)" name="Tunnel">
-      <a name="label" val="IO-3W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(130,430)" name="Tunnel">
+    <comp lib="0" loc="(180,70)" name="Pin">
       <a name="facing" val="south"/>
-      <a name="label" val="IO-3W"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(470,270)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="center"/>
-      <a name="bit1" val="2"/>
-      <a name="bit2" val="4"/>
-      <a name="bit3" val="6"/>
-    </comp>
-    <comp lib="0" loc="(470,270)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="4"/>
-      <a name="label" val="Previous Direction"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="4" loc="(360,360)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(170,560)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="2"/>
-      <a name="label" val="selector"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(230,530)" name="Tunnel">
-      <a name="label" val="t3"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(340,500)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="t3"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(200,270)" name="AND Gate">
-      <a name="label" val="IO-3W"/>
-      <a name="negate0" val="true"/>
-      <a name="negate4" val="true"/>
-    </comp>
-    <comp lib="0" loc="(630,250)" name="Pull Resistor"/>
-    <comp lib="0" loc="(210,520)" name="Tunnel">
-      <a name="label" val="t2"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="6" loc="(416,95)" name="Text">
-      <a name="text" val="RIGHT"/>
-      <a name="font" val="Tahoma plain 12"/>
-    </comp>
-    <comp lib="0" loc="(500,580)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IO-3R"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(410,480)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(500,450)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="6" loc="(130,367)" name="Text">
-      <a name="text" val="Address storage"/>
-      <a name="font" val="SansSerif plain 24"/>
-    </comp>
-    <comp lib="4" loc="(360,420)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(190,510)" name="Tunnel">
-      <a name="label" val="t1"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(620,240)" name="Pull Resistor"/>
-    <comp lib="0" loc="(750,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IO-3R"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="R/W"/>
+      <a name="labelloc" val="north"/>
     </comp>
   </circuit>
   <circuit name="randomGenChip">
@@ -2300,24 +2291,10 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="width" val="8"/>
       <a name="control" val="left"/>
     </comp>
-    <comp lib="0" loc="(130,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SEL"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="4" loc="(300,220)" name="Random"/>
-    <comp lib="0" loc="(80,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ADDR"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="1" loc="(210,210)" name="AND Gate">
-      <a name="label" val="IO-1R"/>
-      <a name="negate3" val="true"/>
-      <a name="negate4" val="true"/>
+    <comp lib="0" loc="(130,220)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="center"/>
     </comp>
     <comp lib="0" loc="(190,80)" name="Pin">
       <a name="facing" val="south"/>
@@ -2325,17 +2302,31 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="R/W"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(130,220)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-      <a name="appear" val="center"/>
-    </comp>
     <comp lib="0" loc="(370,80)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="DATA"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(80,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ADDR"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(300,220)" name="Random"/>
+    <comp lib="1" loc="(210,210)" name="AND Gate">
+      <a name="label" val="IO-1R"/>
+      <a name="negate3" val="true"/>
+      <a name="negate4" val="true"/>
+    </comp>
+    <comp lib="0" loc="(130,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="SEL"/>
       <a name="labelloc" val="north"/>
     </comp>
   </circuit>
@@ -2392,55 +2383,28 @@ f08 1088 1070 0 1ff8 1088 1008 0
     <wire from="(190,230)" to="(260,230)"/>
     <wire from="(60,110)" to="(130,110)"/>
     <wire from="(40,80)" to="(40,140)"/>
+    <comp lib="7" loc="(330,210)" name="inc"/>
+    <comp lib="0" loc="(90,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="SEL"/>
+      <a name="labelloc" val="north"/>
+    </comp>
     <comp lib="1" loc="(190,230)" name="AND Gate">
       <a name="label" val="IO-4R"/>
       <a name="negate2" val="true"/>
       <a name="negate3" val="true"/>
     </comp>
-    <comp lib="0" loc="(310,190)" name="Power"/>
     <comp lib="1" loc="(190,130)" name="AND Gate">
       <a name="label" val="IO-4W"/>
       <a name="negate0" val="true"/>
       <a name="negate2" val="true"/>
       <a name="negate3" val="true"/>
     </comp>
-    <comp lib="0" loc="(240,190)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="tck"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="0" loc="(100,240)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="4" loc="(260,170)" name="Register">
-      <a name="trigger" val="falling"/>
-      <a name="label" val="Score"/>
-    </comp>
-    <comp lib="0" loc="(350,210)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="to Score screen"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="1" loc="(270,240)" name="Controlled Buffer">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-    </comp>
     <comp lib="0" loc="(120,80)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="R/W"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(40,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ADDRESS"/>
       <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(220,80)" name="Pin">
@@ -2450,13 +2414,35 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="DATA"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(90,80)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SEL"/>
+    <comp lib="0" loc="(350,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="to Score screen"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="7" loc="(330,210)" name="inc"/>
+    <comp lib="0" loc="(310,190)" name="Power"/>
+    <comp lib="4" loc="(260,170)" name="Register">
+      <a name="trigger" val="falling"/>
+      <a name="label" val="Score"/>
+    </comp>
+    <comp lib="1" loc="(220,140)" name="Controlled Buffer">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(240,190)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="tck"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="0" loc="(40,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ADDRESS"/>
+      <a name="labelloc" val="north"/>
+    </comp>
     <comp lib="0" loc="(260,270)" name="Pin">
       <a name="output" val="true"/>
       <a name="width" val="8"/>
@@ -2469,9 +2455,14 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="incoming" val="3"/>
       <a name="appear" val="center"/>
     </comp>
-    <comp lib="1" loc="(220,140)" name="Controlled Buffer">
+    <comp lib="1" loc="(270,240)" name="Controlled Buffer">
       <a name="facing" val="south"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(100,240)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="center"/>
     </comp>
   </circuit>
   <circuit name="capacitorModule (16x16)">
@@ -2635,155 +2626,27 @@ f08 1088 1070 0 1ff8 1088 1008 0
     <wire from="(580,170)" to="(590,170)"/>
     <wire from="(580,370)" to="(590,370)"/>
     <wire from="(580,330)" to="(590,330)"/>
-    <comp loc="(860,190)" name="CapacitorElement"/>
-    <comp lib="0" loc="(1840,190)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp loc="(1580,190)" name="CapacitorElement"/>
-    <comp loc="(1100,350)" name="CapacitorElement"/>
-    <comp lib="0" loc="(140,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1100,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp loc="(860,350)" name="CapacitorElement"/>
-    <comp lib="0" loc="(80,290)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="TICK"/>
-    </comp>
-    <comp lib="0" loc="(1540,330)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(80,250)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="to-Zero"/>
-    </comp>
-    <comp lib="0" loc="(340,170)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(640,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(1350,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
     <comp lib="0" loc="(1780,380)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B1"/>
     </comp>
-    <comp lib="0" loc="(340,330)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(1820,230)" name="Tunnel">
+    <comp lib="0" loc="(1830,230)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
+      <a name="label" val="zero"/>
       <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(820,170)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(1060,170)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(1300,370)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp loc="(1340,350)" name="CapacitorElement"/>
-    <comp lib="0" loc="(1120,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(640,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(1110,220)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="zero"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1300,330)" name="Pin">
+    <comp lib="0" loc="(340,330)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="A1"/>
     </comp>
-    <comp lib="0" loc="(100,170)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(380,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1120,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(580,170)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(1540,370)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(1110,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1580,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp loc="(620,350)" name="CapacitorElement"/>
+    <comp loc="(1340,350)" name="CapacitorElement"/>
     <comp lib="0" loc="(160,340)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -2792,62 +2655,129 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="C1"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(1820,390)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(150,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(340,370)" name="Pin">
+    <comp lib="0" loc="(1540,330)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(870,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(820,370)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(1300,210)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
+      <a name="label" val="A1"/>
     </comp>
     <comp lib="0" loc="(1100,380)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="tick"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1300,170)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
+    <comp lib="0" loc="(390,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1780,340)" name="Pin">
+    <comp lib="0" loc="(1120,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1100,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(140,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(160,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(100,370)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B1"/>
     </comp>
+    <comp lib="0" loc="(1830,390)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp loc="(380,350)" name="CapacitorElement"/>
+    <comp lib="0" loc="(580,170)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp loc="(1340,190)" name="CapacitorElement"/>
     <comp lib="0" loc="(1780,220)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B1"/>
     </comp>
-    <comp lib="0" loc="(140,220)" name="Tunnel">
+    <comp loc="(140,350)" name="CapacitorElement"/>
+    <comp lib="0" loc="(140,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp loc="(1820,360)" name="CapacitorElement"/>
+    <comp lib="0" loc="(1600,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(630,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(80,250)" name="Tunnel">
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(880,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp loc="(1580,190)" name="CapacitorElement"/>
+    <comp lib="0" loc="(1590,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(400,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1060,370)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(400,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1820,230)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="tick"/>
       <a name="labelfont" val="SansSerif plain 9"/>
@@ -2860,74 +2790,59 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="C1"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(1060,210)" name="Pin">
+    <comp lib="0" loc="(100,210)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B1"/>
     </comp>
-    <comp lib="0" loc="(1350,380)" name="Tunnel">
+    <comp lib="0" loc="(1580,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(860,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(870,380)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp loc="(860,190)" name="CapacitorElement"/>
+    <comp lib="0" loc="(1840,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1580,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1340,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1060,330)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(620,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(1780,180)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(870,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(580,370)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(1540,210)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp loc="(1820,360)" name="CapacitorElement"/>
-    <comp lib="0" loc="(80,290)" name="Tunnel">
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp loc="(1340,190)" name="CapacitorElement"/>
-    <comp loc="(620,190)" name="CapacitorElement"/>
-    <comp lib="0" loc="(1060,330)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp loc="(380,190)" name="CapacitorElement"/>
-    <comp lib="0" loc="(1340,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(340,210)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(160,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(1600,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(880,180)" name="Pin">
       <a name="facing" val="west"/>
@@ -2937,13 +2852,27 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="C1"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp loc="(380,350)" name="CapacitorElement"/>
-    <comp lib="0" loc="(390,220)" name="Tunnel">
+    <comp lib="0" loc="(1300,370)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(820,210)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(1340,220)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
+      <a name="label" val="tick"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(1600,340)" name="Pin">
+    <comp lib="0" loc="(820,330)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(640,180)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="16"/>
@@ -2951,32 +2880,84 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="C1"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(820,210)" name="Pin">
+    <comp lib="0" loc="(1540,170)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
+      <a name="label" val="A1"/>
     </comp>
-    <comp loc="(1580,350)" name="CapacitorElement"/>
-    <comp lib="0" loc="(1060,370)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
+    <comp lib="0" loc="(380,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
+    <comp loc="(1100,190)" name="CapacitorElement"/>
     <comp lib="0" loc="(1590,220)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="zero"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(80,250)" name="Tunnel">
+    <comp lib="0" loc="(580,210)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(80,290)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="TICK"/>
+    </comp>
+    <comp lib="0" loc="(1300,330)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(1350,380)" name="Tunnel">
+      <a name="facing" val="north"/>
       <a name="label" val="zero"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
+    <comp loc="(620,190)" name="CapacitorElement"/>
+    <comp lib="0" loc="(1600,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1300,210)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(820,170)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(1060,170)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp loc="(860,350)" name="CapacitorElement"/>
     <comp lib="0" loc="(620,220)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="tick"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(580,210)" name="Pin">
+    <comp lib="0" loc="(1060,210)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp loc="(620,350)" name="CapacitorElement"/>
+    <comp loc="(1820,200)" name="CapacitorElement"/>
+    <comp lib="0" loc="(1540,210)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(820,370)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B1"/>
@@ -2986,24 +2967,135 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="tick"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(630,220)" name="Tunnel">
+    <comp lib="0" loc="(1110,380)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="zero"/>
       <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1780,340)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(1350,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp loc="(380,190)" name="CapacitorElement"/>
+    <comp lib="0" loc="(80,290)" name="Tunnel">
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1300,170)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(580,370)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(1540,370)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp loc="(140,190)" name="CapacitorElement"/>
+    <comp lib="0" loc="(150,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(150,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1120,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1360,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(340,370)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(1820,390)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(100,170)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp loc="(1100,350)" name="CapacitorElement"/>
+    <comp lib="0" loc="(580,330)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
     </comp>
     <comp lib="0" loc="(100,330)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
       <a name="label" val="A1"/>
     </comp>
-    <comp lib="0" loc="(860,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="0" loc="(340,170)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
     </comp>
-    <comp lib="0" loc="(1830,230)" name="Tunnel">
+    <comp loc="(1580,350)" name="CapacitorElement"/>
+    <comp lib="0" loc="(640,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(80,250)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="to-Zero"/>
+    </comp>
+    <comp lib="0" loc="(630,380)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(870,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(340,210)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(390,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="zero"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(860,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="tick"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
     <comp lib="0" loc="(1360,180)" name="Pin">
@@ -3014,107 +3106,6 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="C1"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(1340,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1580,220)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(880,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(630,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1830,390)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(860,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp loc="(140,350)" name="CapacitorElement"/>
-    <comp lib="0" loc="(100,210)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(1360,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(400,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp loc="(1820,200)" name="CapacitorElement"/>
-    <comp lib="0" loc="(400,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp loc="(1100,190)" name="CapacitorElement"/>
-    <comp lib="0" loc="(820,330)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(150,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(620,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="tick"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1590,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(390,380)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="zero"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(580,330)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(1540,170)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp loc="(140,190)" name="CapacitorElement"/>
   </circuit>
   <circuit name="CapacitorElement">
     <a name="circuit" val="CapacitorElement"/>
@@ -3148,21 +3139,27 @@ f08 1088 1070 0 1ff8 1088 1008 0
     <wire from="(190,340)" to="(190,360)"/>
     <wire from="(270,220)" to="(310,220)"/>
     <wire from="(230,330)" to="(360,330)"/>
-    <comp lib="0" loc="(360,180)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
+    <comp lib="1" loc="(270,220)" name="OR Gate">
       <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Out Value"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="4" loc="(340,220)" name="Register">
-      <a name="width" val="16"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(310,260)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
       <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(190,360)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="DeleteValue"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="0" loc="(190,200)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="NewValue"/>
+      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="1" loc="(210,280)" name="AND Gate">
       <a name="facing" val="north"/>
@@ -3176,22 +3173,16 @@ f08 1088 1070 0 1ff8 1088 1008 0
       <a name="label" val="ZERO"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="0" loc="(190,200)" name="Pin">
+    <comp lib="4" loc="(340,220)" name="Register">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(360,180)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="NewValue"/>
+      <a name="label" val="Out Value"/>
       <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="1" loc="(270,220)" name="OR Gate">
-      <a name="width" val="16"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(190,360)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="DeleteValue"/>
-      <a name="labelloc" val="south"/>
     </comp>
   </circuit>
 </project>

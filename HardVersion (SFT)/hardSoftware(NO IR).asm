@@ -13,12 +13,6 @@ score_pointer:
 freeDrawIO:
 	asect 0xb0
 tail_arr: ds 64
-
-#Interuptions
-	asect 0xf6
-	dc APPLE_EATED
-	dc 1
-
 	
 #main data
 	asect 0xf0
